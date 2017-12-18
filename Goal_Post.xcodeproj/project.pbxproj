@@ -18,6 +18,7 @@
 		A597B0A81FE8699200CFC2A8 /* CreateGoalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A597B0A71FE8699200CFC2A8 /* CreateGoalVC.swift */; };
 		A597B0AA1FE86EFC00CFC2A8 /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A597B0A91FE86EFC00CFC2A8 /* UIViewControllerExt.swift */; };
 		A597B0AC1FE8788000CFC2A8 /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A597B0AB1FE8788000CFC2A8 /* UIViewExt.swift */; };
+		A597B0AE1FE882D500CFC2A8 /* UIButtonExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A597B0AD1FE882D500CFC2A8 /* UIButtonExt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		A597B0A71FE8699200CFC2A8 /* CreateGoalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGoalVC.swift; sourceTree = "<group>"; };
 		A597B0A91FE86EFC00CFC2A8 /* UIViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
 		A597B0AB1FE8788000CFC2A8 /* UIViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
+		A597B0AD1FE882D500CFC2A8 /* UIButtonExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExt.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 			children = (
 				A597B0A91FE86EFC00CFC2A8 /* UIViewControllerExt.swift */,
 				A597B0AB1FE8788000CFC2A8 /* UIViewExt.swift */,
+				A597B0AD1FE882D500CFC2A8 /* UIButtonExt.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 				A597B0AC1FE8788000CFC2A8 /* UIViewExt.swift in Sources */,
 				A597B08A1FE8240700CFC2A8 /* AppDelegate.swift in Sources */,
 				A597B0AA1FE86EFC00CFC2A8 /* UIViewControllerExt.swift in Sources */,
+				A597B0AE1FE882D500CFC2A8 /* UIButtonExt.swift in Sources */,
 				A597B0921FE8240700CFC2A8 /* Goal_Post.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
