@@ -14,7 +14,8 @@ class GoalCell: UITableViewCell {
      IBOutlets
      */
     
-    @IBOutlet weak var goalDescriptionLbl: UIStackView!
+    
+    @IBOutlet weak var goalDescriptionLbl: UILabel!
     @IBOutlet weak var goalTypeLbl: UILabel!
     @IBOutlet weak var goalProgressLbl: UILabel!
     
@@ -27,7 +28,9 @@ class GoalCell: UITableViewCell {
     /* Configure Cell Function. */
     
     func configureCell(description: String, type: String, goalProgressAmount: Int) {
-        
+        self.goalDescriptionLbl.text = description
+        self.goalTypeLbl.text = type
+        self.goalProgressLbl.text = String(describing: goalProgressAmount)
     } // END Configure Cell
     
     
