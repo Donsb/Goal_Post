@@ -20,6 +20,7 @@ class CreateGoalVC: UIViewController {
     @IBOutlet weak var nextBtn: UIButton!
     
     
+    
     /*
      Functions.
      */
