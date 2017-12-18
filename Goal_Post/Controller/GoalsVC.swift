@@ -46,3 +46,11 @@ class GoalsVC: UIViewController {
 } // END Class.
 
 // GoalsVC:  
+// Goal (Core Data):
+
+
+
+
+
+
+
