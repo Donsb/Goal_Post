@@ -188,10 +188,10 @@
             </objects>
             <point key="canvasLocation" x="32.799999999999997" y="35.467980295566505"/>
         </scene>
-        <!--View Controller-->
+        <!--Create GoalVC-->
         <scene sceneID="Ldo-Q7-iwp">
             <objects>
-                <viewController id="FO7-f6-85y" sceneMemberID="viewController">
+                <viewController id="FO7-f6-85y" customClass="CreateGoalVC" customModule="Goal_Post" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tDU-HW-7bV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -222,6 +222,9 @@
                                             <constraint firstAttribute="height" constant="30" id="yDR-JB-bzP"/>
                                         </constraints>
                                         <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="backBtnWasPressed:" destination="FO7-f6-85y" eventType="touchUpInside" id="j5u-C4-A6x"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -259,6 +262,9 @@
                                                 <state key="normal" title="SHORT TERM">
                                                     <color key="titleColor" red="1" green="0.97377445500000004" blue="0.98994120640000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="shortTermBtnWasPressed:" destination="FO7-f6-85y" eventType="touchUpInside" id="HTM-DO-lSi"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QLg-Ng-g9g">
                                                 <rect key="frame" x="177.66666666666663" y="0.0" width="157.33333333333337" height="50"/>
@@ -267,6 +273,9 @@
                                                 <state key="normal" title="LONG TERM">
                                                     <color key="titleColor" red="1" green="0.97377445500000004" blue="0.98994120640000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="longTermBtnWasPressed:" destination="FO7-f6-85y" eventType="touchUpInside" id="bIz-O8-byE"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -288,6 +297,9 @@
                                 <state key="normal" title="NEXT">
                                     <color key="titleColor" red="1" green="0.97377445500000004" blue="0.98994120640000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="nextBtnWasPressed:" destination="FO7-f6-85y" eventType="touchUpInside" id="Bdi-F9-xhw"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -304,6 +316,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fFt-sL-k5X"/>
                     </view>
+                    <connections>
+                        <outlet property="goalTextView" destination="QaP-ra-O8g" id="biv-fs-vf5"/>
+                        <outlet property="longTermBtn" destination="QLg-Ng-g9g" id="lJc-O9-95k"/>
+                        <outlet property="nextBtn" destination="acW-oy-j5v" id="0Bb-PM-uR0"/>
+                        <outlet property="shortTermBtn" destination="ayw-Jd-cHd" id="ZZ2-En-BH1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lJ5-h7-vIq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
