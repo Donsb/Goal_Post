@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class GoalCell: UITableViewCell {
     
@@ -37,7 +38,8 @@ class GoalCell: UITableViewCell {
 } // END Class.
 
 
-// GoalCell:  
+// GoalCell: 
+// Goal (Core Data):
 
 
 
