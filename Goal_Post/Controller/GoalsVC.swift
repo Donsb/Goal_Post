@@ -23,7 +23,6 @@ class GoalsVC: UIViewController {
     
     
     /* View Did Load Function. */
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
@@ -33,16 +32,15 @@ class GoalsVC: UIViewController {
     
     
     /* Did Receive Memory Warning Function. */
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     } // END Did Receive Memory Warning.
     
     
     /* Add Goal Button Pressed Function. */
-    
     @IBAction func addGoalBtnPressed(_ sender: Any) {
-        print("Button was Pressed.")
+        guard let createGoalVC = storyboard?.instantiateViewController(withIdentifier: "CreateGoalVC") else { return }
+        presentDetail(createGoalVC)
     } // Add Goal Button Pressed
     
     
@@ -79,10 +77,23 @@ extension GoalsVC: UITableViewDelegate, UITableViewDataSource {
 } // END TableView Extension
 
 
+/*
+ 
+ GoalsVC:
+ 
+ 
+ */
 
-// Goal (Core Data):
 
-// GoalsVC:  
+/*
+ 
+ Goal (Core Data):
+ 
+ */
+
+
+
+
 
 
 

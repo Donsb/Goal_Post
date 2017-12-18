@@ -59,14 +59,19 @@ class CreateGoalVC: UIViewController {
     
     /* Back Button Was Pressed Function. */
     @IBAction func backBtnWasPressed(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        dismissDetail()
     } // END Back Button Was Pressed.
     
     
 } // END Class.
 
 
-// CreateGoalVC:  
+/*
+ 
+ CreateGoalVC: 
+ 
+ 
+ */
 
 
 
