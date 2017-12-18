@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  GoalsVC.swift
 //  Goal_Post
 //
 //  Created by Donald Belliveau on 2017-12-18.
@@ -8,7 +8,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class GoalsVC: UIViewController {
+    
+    /*
+     IBOutlets
+     */
+    
+    @IBOutlet weak var tableView: UITableView!
+    
     
     /*
      Functions.
@@ -29,6 +36,13 @@ class ViewController: UIViewController {
     } // END Did Receive Memory Warning.
     
     
+    /* Add Goal Button Pressed Function. */
+    
+    @IBAction func addGoalBtnPressed(_ sender: Any) {
+        
+    } // Add Goal Button Pressed
+    
+    
 } // END Class.
 
-// VC: 
+// GoalsVC:  
