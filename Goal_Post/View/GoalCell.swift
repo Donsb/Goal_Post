@@ -27,9 +27,9 @@ class GoalCell: UITableViewCell {
     
     /* Configure Cell Function. */
     
-    func configureCell(description: String, type: String, goalProgressAmount: Int) {
+    func configureCell(description: String, type: GoalType, goalProgressAmount: Int) {
         self.goalDescriptionLbl.text = description
-        self.goalTypeLbl.text = type
+        self.goalTypeLbl.text = type.rawValue
         self.goalProgressLbl.text = String(describing: goalProgressAmount)
     } // END Configure Cell
     
@@ -37,8 +37,8 @@ class GoalCell: UITableViewCell {
 } // END Class.
 
 
-// GoalCell:
-// Goal (Core Data):
+// GoalCell:  
+
 
 
 
