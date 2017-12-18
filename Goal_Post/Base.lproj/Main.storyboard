@@ -87,7 +87,7 @@
                                 <rect key="frame" x="0.0" y="114" width="375" height="664"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="goalCell" rowHeight="70" id="B7y-gg-0Se" customClass="GoalCell" customModule="Goal_Post" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="goalCell" rowHeight="70" id="B7y-gg-0Se" customClass="GoalCell" customModule="Goal_Post" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="B7y-gg-0Se" id="HqP-jb-4ju">
@@ -287,7 +287,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acW-oy-j5v">
-                                <rect key="frame" x="0.0" y="728" width="375" height="50"/>
+                                <rect key="frame" x="0.0" y="762" width="375" height="50"/>
                                 <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="1yW-O1-ZMw"/>
@@ -309,7 +309,7 @@
                             <constraint firstItem="21p-DQ-MiK" firstAttribute="leading" secondItem="fFt-sL-k5X" secondAttribute="leading" constant="20" id="HyO-9L-PGT"/>
                             <constraint firstItem="Wo2-nW-oBY" firstAttribute="trailing" secondItem="fFt-sL-k5X" secondAttribute="trailing" id="KBy-3a-u1S"/>
                             <constraint firstItem="Wo2-nW-oBY" firstAttribute="leading" secondItem="fFt-sL-k5X" secondAttribute="leading" id="Wed-KE-KOy"/>
-                            <constraint firstItem="acW-oy-j5v" firstAttribute="bottom" secondItem="fFt-sL-k5X" secondAttribute="bottom" id="XeW-W1-A9K"/>
+                            <constraint firstItem="acW-oy-j5v" firstAttribute="bottom" secondItem="tDU-HW-7bV" secondAttribute="bottom" id="XeW-W1-A9K"/>
                             <constraint firstItem="fFt-sL-k5X" firstAttribute="trailing" secondItem="acW-oy-j5v" secondAttribute="trailing" id="kIh-Fe-OyJ"/>
                             <constraint firstItem="fFt-sL-k5X" firstAttribute="trailing" secondItem="21p-DQ-MiK" secondAttribute="trailing" constant="20" id="mjy-am-IXm"/>
                         </constraints>
