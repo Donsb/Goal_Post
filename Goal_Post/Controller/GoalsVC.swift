@@ -42,6 +42,13 @@ class GoalsVC: UIViewController {
     /* View Will Appear Function. */
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        fetchCoreDataObjects()
+        tableView.reloadData() //Reload TableView each time we come to this screen after fetching data.
+    } // END View Will Appear.
+    
+    
+    /* Fetch Core Data Objects Function. */
+    func fetchCoreDataObjects() {
         self.fetch { (complete) in
             if complete {
                 if goals.count >= 1 {
@@ -50,9 +57,8 @@ class GoalsVC: UIViewController {
                     tableView.isHidden = true
                 }
             }
-            tableView.reloadData() //Reload TableView each time we come to this screen after fetching data.
         }
-    } // END View Will Appear.
+    } // END Fetch Core Data Objects.
     
     
     /* Did Receive Memory Warning Function. */
@@ -99,13 +105,56 @@ extension GoalsVC: UITableViewDelegate, UITableViewDataSource {
     } // END Cell For Row At.
     
     
+    /* Can Edit Row At Index Path Function. */
+        //-> Allows Editing of TableView.
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }// END Can Edit Row At Index Path.
+    
+    
+    /* Editing Style For Row At Function. */
+        //-> Allows insert, delete... with default icons.  We use none as will be custom.
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
+        return UITableViewCellEditingStyle.none
+    } // END Editing Style For Row At.
+    
+    
+    /* Edit Actions For Row At Function. */
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let deleteAction = UITableViewRowAction(style: .destructive, title: "DELETE") { (rowAction, indexPath) in
+                // Removes the Goal using our function
+            self.removeGoal(atIndexPath: indexPath)
+                // Need to fetch the data as it's changed.
+            self.fetch(completion: <#T##(Bool) -> ()#>)
+        }
+    } // END Edit Actions For Row At.
+    
+    
 } // END TableView Extension
 
 
 // Fetch Data Functions.
 extension GoalsVC {
     
-    /*  */
+    /* Remove Goal Function. */
+    func removeGoal(atIndexPath indexPath: IndexPath) {
+        guard let managedContext = appDelegate?.persistentContainer.viewContext else { return }
+        
+            // Grab the indexPath of the item selected to be deleted.
+        managedContext.delete(goals[indexPath.row])
+        
+        do {
+                // Save the deletion to the Data
+            try managedContext.save()
+            print("Successfully removed goal.")
+        } catch {
+            debugPrint("Could not remove: \(error.localizedDescription)")
+        }
+        
+    } // END Remove Goal
+    
+    
+    /* Fetch Function. */
     func fetch(completion: (_ complete: Bool)-> ()) {
         guard let managedContect = appDelegate?.persistentContainer.viewContext else { return }
         
@@ -119,7 +168,7 @@ extension GoalsVC {
             debugPrint("Could not fetch: \(error.localizedDescription)")
             completion(false)
         }
-    }
+    } // END Fetch.
     
 } // END Fetch Extension.
 
