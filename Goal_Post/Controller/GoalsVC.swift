@@ -125,8 +125,13 @@ extension GoalsVC: UITableViewDelegate, UITableViewDataSource {
                 // Removes the Goal using our function
             self.removeGoal(atIndexPath: indexPath)
                 // Need to fetch the data as it's changed.
-            self.fetch(completion: <#T##(Bool) -> ()#>)
+            self.fetchCoreDataObjects()
+            tableView.deleteRows(at: [indexPath], with: .automatic)
         }
+        
+        deleteAction.backgroundColor = #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1)
+        
+        return [deleteAction]
     } // END Edit Actions For Row At.
     
     
@@ -175,7 +180,7 @@ extension GoalsVC {
 
 /*
  
- GoalsVC:  
+ GoalsVC:
  
  */
 
