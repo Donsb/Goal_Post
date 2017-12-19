@@ -8,7 +8,14 @@
 
 import UIKit
 
-class FinishGoalVC: UIViewController {
+class FinishGoalVC: UIViewController, UITextFieldDelegate {
+    
+    /*
+     Instance Variables.
+     */
+    
+    var goalDescription: String!
+    var goalType: GoalType!
     
     /*
      IBOutlets.
@@ -23,10 +30,18 @@ class FinishGoalVC: UIViewController {
      */
     
     
+    /* Init Data Function. */
+    func initData(description: String, type: GoalType) {
+        self.goalDescription = description
+        self.goalType = type
+    } // END Init Data.
+    
+    
     /* View Did Load Function. */
     override func viewDidLoad() {
         super.viewDidLoad()
         createGoalBtn.bindToKeyboard()
+        pointsTextField.delegate = self
     } // END View Did Load.
     
     
@@ -42,7 +57,7 @@ class FinishGoalVC: UIViewController {
 /*
  
  
- FinishGoalVC:   
+ FinishGoalVC:  
  
  
  */
