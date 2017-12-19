@@ -34,8 +34,3 @@ extension UIView {
 } // END Extension.
 
 
-/*
- 
- UIViewExt: 
- 
- */

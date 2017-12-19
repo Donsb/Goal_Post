@@ -77,6 +77,7 @@ class GoalsVC: UIViewController {
 } // END Class.
 
 
+
 /*
  Extensions
  */
@@ -144,7 +145,8 @@ extension GoalsVC: UITableViewDelegate, UITableViewDataSource {
 } // END TableView Extension
 
 
-// Fetch Data Functions.
+
+// Fetch Data Extension.
 extension GoalsVC {
     
     /* Set Progress Function. */
@@ -203,39 +205,6 @@ extension GoalsVC {
         }
     } // END Fetch.
     
+    
 } // END Fetch Extension.
-
-
-/*
- 
- GoalsVC:
- 
- */
-
-
-/*
- 
- Goal (Core Data):
- 
- */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

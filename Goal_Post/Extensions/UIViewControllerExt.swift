@@ -54,25 +54,6 @@ extension UIViewController {
         dismiss(animated: false, completion: nil)
     } // END Dismiss Detail.
     
+    
 } // END Extension.
-
-
-/*
- 
- UIViewControllerExt:  
- 
- 
- */
-
-
-
-
-
-
-
-
-
-
-
-
 

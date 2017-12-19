@@ -18,6 +18,7 @@ class FinishGoalVC: UIViewController, UITextFieldDelegate {
     var goalDescription: String!
     var goalType: GoalType!
     
+    
     /*
      IBOutlets.
      */
@@ -87,25 +88,6 @@ class FinishGoalVC: UIViewController, UITextFieldDelegate {
     
     
 } // END Class.
-
-
-/*
- 
- 
- FinishGoalVC:  
- 
- */
-
-
-
-
-
-
-
-
-
-
-
 
 
 

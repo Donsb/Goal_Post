@@ -19,11 +19,13 @@ class CreateGoalVC: UIViewController, UITextViewDelegate {
     @IBOutlet weak var longTermBtn: UIButton!
     @IBOutlet weak var nextBtn: UIButton!
     
+    
     /*
      Instance Variables.
      */
     
     var goalType: GoalType = .shortTerm
+    
     
     /*
      Functions.
@@ -45,6 +47,7 @@ class CreateGoalVC: UIViewController, UITextViewDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     } // END Did Receive Memory Warning
+    
     
     /* Short Term Button was Pressed Function. */
     @IBAction func shortTermBtnWasPressed(_ sender: Any) {
@@ -86,31 +89,5 @@ class CreateGoalVC: UIViewController, UITextViewDelegate {
     
     
 } // END Class.
-
-
-/*
- 
- CreateGoalVC:
- 
- 
- */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
