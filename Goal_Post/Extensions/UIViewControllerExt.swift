@@ -24,6 +24,24 @@ extension UIViewController {
     } // END Present Detail.
     
     
+    /*  */
+        // This will send us to the next VC while at the same time in the backend dismiss to the main page.
+        // That way, when we click Create Goal, we go back to the main page and not CreateGoalsVC.
+    func presentSecondaryDetail(_ viewControllerToPresent: UIViewController) {
+        let transition = CATransition()
+        transition.duration = 0.3
+        transition.type = kCATransitionPush
+        transition.subtype = kCATransitionFromRight
+        
+        guard let presentedViewController = presentedViewController else { return }
+        
+        presentedViewController.dismiss(animated: false) {
+            self.view.window?.layer.add(transition, forKey: kCATransition)
+            self.present(viewControllerToPresent, animated: false, completion: nil)
+        }
+    }
+    
+    
     /* Dismiss Detail Function. */
     func dismissDetail() {
         let transition = CATransition()
@@ -41,7 +59,7 @@ extension UIViewController {
 
 /*
  
- UIViewControllerExt:
+ UIViewControllerExt:  
  
  
  */
